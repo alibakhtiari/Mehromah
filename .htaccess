@@ -14,28 +14,3 @@ RewriteRule . /index.php [L]
 # END WordPress
 #Alternate default index page
 DirectoryIndex index.html index.php
-#example.com/page will display the contents of example.com/page.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L,QSA]
-
-#301 from example.com/page.html to example.com/page
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-Redirect 301 /introduction/ /introduction
-Redirect 301 /introductionimg_8419/ /assets/images/intro/145.jpg
-Redirect 301 /introductionattachment/100/ /assets/images/intro/100.jpg
-Redirect 301 /introductionattachment/151/ /assets/images/intro/151.jpg
-Redirect 301 /introductionattachment/150/ /assets/images/intro/150.jpg
-Redirect 301 /introductionattachment/130/ /assets/images/intro/130.jpg
-Redirect 301 /introductionattachment/144/ /assets/images/intro/144.jpg
-Redirect 301 /introductionattachment/110/ /assets/images/intro/110.jpg
-Redirect 301 /introductionattachment/143/ /assets/images/intro/143.jpg
-Redirect 301 /introductionattachment/142/ /assets/images/intro/142.jpg
-Redirect 301 /introductionattachment/141/ /assets/images/intro/141.jpg
-Redirect 301 /introductionattachment/131/ /assets/images/intro/131.jpg
-Redirect 301 /introductionattachment/151/ /assets/images/intro/121.jpg
-Redirect 301 /introductionattachment/151/ /assets/images/intro/120.jpg
-Redirect 301 /introductionattachment/151/ /assets/images/intro/161.jpg
-Redirect 301 /introduction5-1/ /
